@@ -6,7 +6,7 @@
 #include "../include/dataset.h"
 
 #define MAX_DIM 128
-#define LINE_BUF 1024
+#define LINE_BUF 4096
 
 /*
  * Загружает датасет из CSV-файла.
