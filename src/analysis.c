@@ -84,7 +84,7 @@ int find_best_k(const Point *data, int n_points, int max_k, int dim)
             }
 
             // Запуск алгоритма k-means
-            kmeans(data, n_points, k, dim, labels, centroids, 100);
+            kmeans(data, n_points, k, dim, labels, centroids, 10000);
 
             // Оценка качества кластеризации
             double score = compute_silhouette(data, labels, n_points, k, dim);
