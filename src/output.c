@@ -148,7 +148,7 @@ void save_metrics_csv(const Dataset *dataset, int max_k, const char *filename)
             labels[i] = -1;
 
         // запуск алгоритма k-means
-        kmeans(dataset->points, dataset->size, k, dataset->dim, labels, centroids, 100);
+        kmeans(dataset->points, dataset->size, k, dataset->dim, labels, centroids, 10000);
 
         // вычисление метрик
         wcss_arr[k] = compute_wcss(dataset->points, labels, centroids, dataset->size, k, dataset->dim);
